@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
     /* open input and output files */
     inputFd = open(argv[1], O_RDONLY);
-    if (inputFd == 1)
+    if (inputFd == -1)
         errExit("opening file %s", argv[1]);
 
     openFlags = O_CREAT | O_WRONLY | O_TRUNC;
